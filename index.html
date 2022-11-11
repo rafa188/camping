@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Camping</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_bul.css">
+</head>
+<body>
+    
+    <header>
+        <a href="#" class="logo">Camping</a>
+        <ul class="navigation">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Contact</a></li> 
+        </ul>
+    </header>
+    <section class="parallax">
+        <h2 id="text">Camping Website</h2>
+        <img src="/imagens/monutain_01.png" id="m1">
+        <img src="/imagens/trees_02.png" id="t2">
+        <img src="/imagens/monutain_02.png" id="m2">
+        <img src="/imagens/trees_01.png" id="t1">
+        <img src="/imagens/man.png" id="nan">
+        <img src="/imagens/plants.png" alt="plants">
+    </section>
+    <section class="sec">
+        <h2>Camping looking Website</h2>
+        <p>A história do acampamento recreativo é muitas vezes rastreada até Thomas Hiram Holding, um alfaiate viajante britânico, mas na verdade foi popularizado no Reino Unido no rio Tâmisa. Na década de 1880, um grande número de visitantes participava do passatempo, que estava ligado à mania vitoriana da navegação de recreio. O equipamento de acampamento inicial era muito pesado, por isso era conveniente transportá-lo de barco ou usar embarcações que se convertiam em tendas. <br><br> Embora Thomas Hiram Holding seja frequentemente visto como o pai do acampamento moderno no Reino Unido, ele foi o responsável pela popularização de um tipo diferente de acampamento no início do século XX. Ele experimentou a atividade na selva desde sua juventude, quando passou muito tempo com seus pais viajando pelas pradarias americanas. Mais tarde, ele embarcou em um passeio de bicicleta e acampamento com alguns amigos pela Irlanda. Seu livro sobre sua experiência na Irlanda, Cycle and Camp in Connemara, levou à formação do primeiro grupo de camping em 1901, a Association of Cycle Campers, que mais tarde se tornou o Camping and Caravanning Club.<br><br> Ele escreveu o The Campers Handbook em 1908, para que pudesse compartilhar seu entusiasmo por atividades ao ar livre com o mundo.
+
+            Possivelmente o primeiro acampamento comercial do mundo foi o acampamento de Cunningham, perto de Douglas, na Ilha de Man, inaugurado em 1894. Em 1906, a Associação de Campistas de Ciclo abriu seu primeiro acampamento próprio, em Weybridge. Naquela época, a organização tinha várias centenas de membros. Em 1910, a Associação foi fundida no National Camping Club. Embora a Primeira Guerra Mundial tenha sido responsável por um certo hiato na atividade de acampamento, a associação recebeu um novo sopro de vida após a guerra, quando Sir Robert Baden-Powell (fundador do movimento dos escoteiros) tornou-se seu presidente.
+            
+            Nos Estados Unidos, o acampamento pode ser rastreado até a publicação de William Henry Harrison Murray, de 1869, da Camp-Life in the Adirondacks, resultando em uma enxurrada de visitantes aos Adirondacks naquele verão. <br><br>
+            
+            A Federação Internacional de Clubes de Campismo (Federation Internationale de Camping et de Caravanning) foi fundada em 1932 com clubes nacionais de todo o mundo afiliados a ela. Na década de 1960, acampar havia se tornado um padrão estabelecido para férias em família e hoje os acampamentos são onipresentes na Europa e na América do Norte</p>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.from("#m1",{
+            scrollTrigger : {
+                scrub: true
+            },
+            y: 100,
+        })
+        gsap.from("#m2",{
+            scrollTrigger : {
+                scrub: true
+            },
+            y: 50,
+        })
+        gsap.from("#t2",{
+            scrollTrigger : {
+                scrub: true
+            },
+            x: -50,
+        })
+        gsap.from("#t1",{
+            scrollTrigger : {
+                scrub: true
+            },
+            x: 50,
+        })
+        gsap.from("#man",{
+            scrollTrigger : {
+                scrub: true
+            },
+            x: 250,
+        })
+        gsap.from("#plants",{
+            scrollTrigger : {
+                scrub: true
+            },
+            x: -50,
+        })
+        gsap.from("#text",{
+            scrollTrigger : {
+                scrub: true
+            },
+            x: 600,
+        })
+    </script>
+    <main id="fun">
+        <div class="login">
+            <h2 id="txt">Login</h2>
+            <div class="inputBox">
+                <input type="text" placeholder="Username">
+            </div>
+            <div class="inputBox">
+                <input type="password" placeholder="Password">
+            </div>
+            <div class="inputBox">
+                <input type="submit" value="Login" id="btn">
+            </div>
+            <div class="group">
+                <a href="#">Forget Password</a>
+                <a href="#">Signup</a>
+            </div>
+        </div>
+        <div class="colors">
+            <span  class="active" onclick="changeColor('#112434')" style="--clr:#112434;"></span>
+            <span onclick="changeColor('#4D8CBB')" style="--clr:#4D8CBB;"></span>
+            <span onclick="changeColor('#8C4949')" style="--clr:#8C4949;"></span>
+            <span onclick="changeColor('#402037')" style="--clr:#402037;"></span>
+            <span onclick="changeColor('#422B26')" style="--clr:#422B26;"></span>
+        </div>
+
+        <script>
+            let btn = document.getElementById('btn');
+            let fun = document.getElementById('fun');
+            let txt = document.getElementById('txt');
+            function changeColor(color){
+                document.body.style.color = color;
+                btn.style.background = color;
+                fun.style.background = color;
+                txt.style.borderColor = color;
+
+                // work as active selected color
+                document.querySelectorAll('span').forEach(function(item){
+                    item.classList.remove('active');
+                })
+                event.target.classList.add('active');
+            }
+        </script>
+    </main>
+    <h2 id="quest">Como funciona a bússola?</h2>
+    <footer>
+        <div class="safari">
+            <div class="circle_lines">
+                <span class="span1" style="--i:1;"></span>
+                <span class="span1" style="--i:2;"></span>
+                <span class="span1" style="--i:3;"></span>
+                <span class="span1" style="--i:4;"></span>
+                <span class="span1" style="--i:5;"></span>
+                <span class="span1" style="--i:6;"></span>
+                <span class="span1" style="--i:7;"></span>
+                <span class="span1" style="--i:8;"></span>
+                <span class="span1" style="--i:9;"></span>
+                <span class="span1" style="--i:10;"></span>
+                <span class="span1" style="--i:11;"></span>
+                <span class="span1" style="--i:12;"></span>
+                <span class="span1" style="--i:13;"></span>
+                <span class="span1" style="--i:14;"></span>
+                <span class="span1" style="--i:15;"></span>
+                <span class="span1" style="--i:16;"></span>
+                <span class="span1" style="--i:17;"></span>
+                <span class="span1" style="--i:18;"></span>
+                <span class="span1" style="--i:19;"></span>
+                <span class="span1" style="--i:20;"></span>
+                <span class="span1" style="--i:21;"></span>
+                <span class="span1" style="--i:22;"></span>
+                <span class="span1" style="--i:23;"></span>
+                <span class="span1" style="--i:24;"></span>
+                <span class="span1" style="--i:25;"></span>
+                <span class="span1" style="--i:26;"></span>
+                <span class="span1" style="--i:27;"></span>
+                <span class="span1" style="--i:28;"></span>
+                <span class="span1" style="--i:29;"></span>
+                <span class="span1" style="--i:30;"></span>
+                <span class="span1" style="--i:31;"></span>
+                <span class="span1" style="--i:32;"></span>
+                <span class="span1" style="--i:33;"></span>
+                <span class="span1" style="--i:34;"></span>
+                <span class="span1" style="--i:35;"></span>
+                <span class="span1" style="--i:36;"></span>
+            </div>
+            <div class="niddle"></div>
+        </div>
+    </footer>
+    <p class="ass">O principal mecanismo da bússola é a sua agulha magnetizada, que funciona como um ímã. Esse pequeno ímã interage com o campo magnético do planeta Terra, formado em decorrência da composição interna do planeta, e faz com que ele próprio se comporte como um ímã gigante.</p>
+    
+</body>
+</html>

@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins: 300,400,500,600,700,800,900display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body
+{
+    overflow-x: hidden;
+    background: #fff;
+    min-height: 100vh;
+}
+header
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+.logo
+{
+    
+    color: #112434;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+}
+.navigation
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.navigation li
+{
+    list-style: none;
+}
+.navigation li a
+{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #112434;
+    border-radius: 20px;
+}
+.navigation li a:hover,
+.navigation li a.active
+{
+    background: #112434;
+    color: #fff;
+}
+.parallax
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.parallax img
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+#text
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 4em;
+    color: #112434;
+}
+.sec
+{
+    position: relative;
+    padding: 100px;
+    background: #112434;
+}
+.sec h2
+{
+    font-size: 3em;
+    color: #fff;
+    margin-bottom: 10px;   
+}
+.sec p
+{
+    font-size: 1em;
+    color: #fff;
+    font-weight: 300;
+}
+main
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    background: #112434;
+    transition: 0.5s;
+}
+.login
+{
+    margin: auto;
+    position: relative;
+    padding: 50px;
+    background: #fff;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+    
+}
+.login h2
+{
+    font-weight: 500;
+    border-left: 15px solid #112434;
+    line-height: 1em;
+    padding-left: 10px;
+    transition: 0.5s;
+    color: #333;
+}
+.login  .inputBox
+{
+    position: relative;
+}
+.login .inputBox input
+{
+    position: relative;
+    width: 100%;
+    padding: 10px 15px;
+    outline: none;
+    border: 2px solid  #555;
+    font-size: 1em;
+    color: #333;
+}
+.login .inputBox input#btn
+{
+    border: none;
+    background: #112434;
+    color: #fff;
+    transition: 0.5s;
+    font-size: 1.1em;
+    font-weight: 500;
+    cursor: pointer;
+}
+.login .group
+{
+    display: flex;
+    justify-content: space-between;
+}
+.login .group a
+{
+    color: #333;
+    text-decoration: none
+}
+.login .group a:nith-child(2)
+{
+    font-weight: 500;
+    text-decoration: underline;
+}
+.colors
+{
+    position: absolute;
+    right: 0;
+    padding: 10px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.colors span
+{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background: var(--clr);
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.colors span.active
+{
+    border: 2px solid #222;
+    scale: 1.5;
+    transition: 0.5s;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.418);
+}
+
+
+
